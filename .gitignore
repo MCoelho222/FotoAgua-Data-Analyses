@@ -1,0 +1,5 @@
+venv/
+minidot_concat/*
+minidot_graphs/*
+minidot_stats/*
+minidot_data/**/*.txt
