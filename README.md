@@ -14,6 +14,23 @@ The FotoAgua project is a partnership between the sanitation company of the Stat
 <img src=images/minidot_oct-22_fev-23.svg alt="Floating Photovoltaic Power Plant at Passaúna Reservoir"/>
 </div>
 
+## hypothesis testing example
+
+### Dissolved Oxygen
+
+| Hypothesis | Surface | Bottom |
+|----------|----------|----------|
+|LR = PV1 | False (stat: -71.7, p-valor: 0.0) | False (stat: 163.3, p-valor: 0.0) |
+|LR > PV1 | True | False |
+|LR < PV1 | False | True |
+
+### Temperature
+
+| Hypothesis | Surface | Bottom |
+|----------|----------|----------|
+|LR = PV1 | False (stat: 3.77, p-valor: 8.03e-05) | False (stat: 106.9, p-valor: 0.0) |
+|LR > PV1 | False | False |
+|LR < PV1 | True | True |
 # Acronyms for the measurement locations
 
 * **LR** = lake reference
