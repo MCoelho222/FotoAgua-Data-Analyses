@@ -32,12 +32,12 @@ The FotoAgua project is a partnership between the sanitation company of the Stat
 |LR > PV1 | False | False |
 |LR < PV1 | True | True |
 
-# Acronyms for the measurement locations
+## Acronyms for the measurement locations
 
 * **LR** = lake reference
 * **PV1** = photovoltaic system
 
-# Folder names and meaning
+## Folder names and meaning
 
 * **minidot_data**: stores the daily CSV files from miniDOT sensors in sub-folders
   * **lr_fundo**: stores the daily CSV files from the bottom sensor at LR
