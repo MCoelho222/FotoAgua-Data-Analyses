@@ -1,16 +1,19 @@
 import os
-from os.path import dirname, abspath, join
 import numpy as np
 import matplotlib.pyplot as plt
 from minidot_concat import concat_minidot
-
-
-ROOTPATH = dirname(abspath(__file__))
-DATAPATH = join(ROOTPATH, 'minidot_data')
-GRAPH_PATH = join(ROOTPATH, 'minidot_graphs')
+from config import System
 
 
 def minidot_plot():
+    """------------------------------------------------------------
+    FUNCTION Plot the measurements from the 4 sensors installed at
+    the Passaúna reservoir, at the metropolitan region of Curitiba,
+    in the south of Brazil. Each sensor measures dissolved oxygen 
+    and water temperature.
+    ---------------------------------------------------------------
+    RETURN SVG PNG and JPEG files
+    ------------------------------------------------------------"""
 
     fig, axes = plt.subplots(nrows=2, ncols=2, figsize=(16, 8))
     ax_index = {'fundo': 0, 'sup': 1}
@@ -19,7 +22,7 @@ def minidot_plot():
 
     minidot_dict = concat_minidot()
 
-    for folder in os.listdir(DATAPATH):
+    for folder in os.listdir(System.DATAPATH):
 
         folder_split = folder.split('_')
         site = folder_split[0]
@@ -35,7 +38,7 @@ def minidot_plot():
             '  T (deg C)': t_col
             }
 
-        df = minidot_dict[folder].rename(columns = rename_dict)
+        df = minidot_dict[folder].rename(columns=rename_dict)
 
         df[do_col].plot(ax=axes[0, ax_col],
                         legend=True,
@@ -45,7 +48,6 @@ def minidot_plot():
                         color=colors[site],
                         linewidth=1.0,
                         yticks=do_y_ticks)
-        
         df[t_col].plot(ax=axes[1, ax_col],
                        legend=True,
                        ylabel='°C',
@@ -57,23 +59,22 @@ def minidot_plot():
 
         axes[0, 1].yaxis.set_ticklabels([])
         axes[1, 1].yaxis.set_ticklabels([])
-        axes[0, 1].xaxis.set_ticklabels([])
-        axes[0, 0].xaxis.set_ticklabels([])
-        axes[0, 0].xaxis.label.set_visible(False)
-        axes[0, 1].xaxis.label.set_visible(False)
         axes[0, 1].yaxis.label.set_visible(False)
         axes[1, 1].yaxis.label.set_visible(False)
 
-    figname1 = f'{GRAPH_PATH}/minidot_oct-22_fev-23.svg'
-    figname2 = f'{GRAPH_PATH}/minidot_oct-22_fev-23.png'
-    figname3 = f'{GRAPH_PATH}/minidot_oct-22_fev-23.jpg'
+        axes[0, 0].xaxis.set_ticklabels([])
+        axes[0, 1].xaxis.set_ticklabels([])
+        axes[0, 0].xaxis.label.set_visible(False)
+        axes[0, 1].xaxis.label.set_visible(False)
+
+    f_types = ['.svg', '.png', '.jpg']
+    for f_type in f_types: 
+        figname = f'{System.GRAPH_PATH}/minidot_oct-22_fev-23{f_type}'
+        plt.savefig(figname, dpi=600)
+    
     plt.tight_layout()
-    plt.savefig(figname1)
-    plt.savefig(figname2, dpi=600)
-    plt.savefig(figname3, dpi=600)
     plt.show()
  
-    return
 
 if __name__ == "__main__":
 
