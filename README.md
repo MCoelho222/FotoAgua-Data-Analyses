@@ -2,9 +2,17 @@
 
 The FotoAgua project is a partnership between the sanitation company of the State of Paraná (SANEPAR) and the Federal University of Paraná (UFPR). The goal is to evaluate the impacts from a floating photovoltaic power plant over the water quality of Passaúna reservoir, which is a public supply reservoir of the city of Curitiba, in the state of Paraná, in the south of Brazil. Four automatic sensors (miniDOTs) were installed in the reservoir, 2 underneath the photovoltaic system (surface and bottom), and 2 at a reference point away from the system (surface and bottom). The sensors provide measurements at each 5 minutes, since october 27, 2022. The data is retrieved each month from the memory card of the sensor in CSV format. The sensors generate a CSV for each day, with measurements of dissolved oxygen and water temperature.
 
-![Floating Photovoltaic Power Plant at Passaúna Reservoir](images/210408_usina_passauna_2.jpeg)
+## Floating Photovoltaic Power Plant at Passaúna Reservoir
 
-![MiniDOT plots](images/minidot_oct-22_fev-23.svg)
+<div style="text-align: center;">
+<img src=images/210408_usina_passauna_2.jpeg alt="Floating Photovoltaic Power Plant at Passaúna Reservoir"/>
+</div>
+
+## MiniDOT plot example
+
+<div style="text-align: center;">
+<img src=images/minidot_oct-22_fev-23.svg alt="Floating Photovoltaic Power Plant at Passaúna Reservoir"/>
+</div>
 
 # Acronyms for the measurement locations
 
