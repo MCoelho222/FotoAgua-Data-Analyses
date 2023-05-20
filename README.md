@@ -48,10 +48,10 @@ In the root of the project you must create 4 folders and 4 sub-folders in the mi
 
 1. minidot_concat
 2. minidot_data
-  1. lr_sup
-  2. lr_fundo
-  3. pv1_sup
-  4. pv1_fundo
+    1. lr_sup
+    2. lr_fundo
+    3. pv1_sup
+    4. pv1_fundo
 3. minidot_graphs
 4. minidot_stats
 
