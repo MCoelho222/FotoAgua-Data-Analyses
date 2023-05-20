@@ -4,16 +4,16 @@ The FotoAgua project is a partnership between the sanitation company of the Stat
 
 # Acronyms for the measurement locations
 
-*LR = lake reference
-*PV1 = photovoltaic system
+* LR = lake reference
+* PV1 = photovoltaic system
 
 # Folder names and meaning
 
-*minidot_data: stores the daily CSV files from miniDOT sensors in sub-folders
-  *lr_fundo: stores the daily CSV files from the bottom sensor at LR
-  *lr_sup: stores the daily CSV files from the surface sensor at LR
-  *pv1_fundo: stores the daily CSV files from the bottom sensor at PV1 
-  *pv1_sup: stores the daily CSV files from the surface sensor at PV1
+* minidot_data: stores the daily CSV files from miniDOT sensors in sub-folders
+  * lr_fundo: stores the daily CSV files from the bottom sensor at LR
+  * lr_sup: stores the daily CSV files from the surface sensor at LR
+  * pv1_fundo: stores the daily CSV files from the bottom sensor at PV1 
+  * pv1_sup: stores the daily CSV files from the surface sensor at PV1
 
 ## Creating virtual environment and installing packages
 
