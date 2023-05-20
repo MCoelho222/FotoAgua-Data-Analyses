@@ -14,7 +14,7 @@ The FotoAgua project is a partnership between the sanitation company of the Stat
 <img src=images/minidot_oct-22_fev-23.svg alt="Floating Photovoltaic Power Plant at Passaúna Reservoir"/>
 </div>
 
-## hypothesis testing example
+## Hypothesis testing example
 
 ### Dissolved Oxygen
 
@@ -31,6 +31,7 @@ The FotoAgua project is a partnership between the sanitation company of the Stat
 |LR = PV1 | False (stat: 3.77, p-valor: 8.03e-05) | False (stat: 106.9, p-valor: 0.0) |
 |LR > PV1 | False | False |
 |LR < PV1 | True | True |
+
 # Acronyms for the measurement locations
 
 * **LR** = lake reference
@@ -38,7 +39,7 @@ The FotoAgua project is a partnership between the sanitation company of the Stat
 
 # Folder names and meaning
 
-* minidot_data: stores the daily CSV files from miniDOT sensors in sub-folders
+* **minidot_data**: stores the daily CSV files from miniDOT sensors in sub-folders
   * **lr_fundo**: stores the daily CSV files from the bottom sensor at LR
   * **lr_sup**: stores the daily CSV files from the surface sensor at LR
   * **pv1_fundo**: stores the daily CSV files from the bottom sensor at PV1 
